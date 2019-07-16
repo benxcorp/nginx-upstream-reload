@@ -26,7 +26,7 @@ parser.add_argument('-i', '--include', dest='include_list', default='', help='Co
 parser.add_argument('-e', '--exclude', dest='exclude_list', default='', help='Comma separated list of servers to only exclude')
 parser.add_argument('-t', '--duration', dest='duration', default=60, help='DNS checking interval')
 args = parser.parse_args()
-logging.basicConfig(filename='nginx_reloader.log', format='%(asctime)s : %(levelname)s : %(message)s', datefmt='%m:%d:%Y %I:%M:%S %p', level=args.loglevel)
+logging.basicConfig(filename='logs/nginx-reloader.log', format='%(asctime)s : %(levelname)s : %(message)s', datefmt='%m:%d:%Y %I:%M:%S %p', level=args.loglevel)
 
 # set up logging to console
 if args.stdout:
